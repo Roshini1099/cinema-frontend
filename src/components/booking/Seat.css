@@ -1,0 +1,101 @@
+.container {
+    display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: center;
+  }
+  .buttonTrue {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #000;
+    background-color: yellow;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+  .buttonFalse {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: red;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  .blackButton{
+    background-color: black;
+    color: white;
+  }
+  
+  .whiteButton{
+    background-color: white;
+    color: black;
+  }
+  
+  
+  .grid td {
+    width: 80px;
+    height: 50px;
+    padding: 50px 30px;
+    border: 2px solid orange;
+    text-align: center;
+    float: left;
+    margin: 5px;
+  }
+  
+  .grid td:hover {
+    opacity: .7;
+    cursor: pointer;
+  }
+  
+  .reserved {
+    background: orange;
+    color: #fff;
+    display: inline-block;
+  }
+  
+  .reserved::after {
+    content: 'RESERVED'
+  }
+  
+  .available::after {
+    content: 'AVAILABLE'
+  }
+  
+  .available {
+    color: #333;
+  }
+  
+  li {
+    list-style: none;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  
+  .bg-text {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+  }
