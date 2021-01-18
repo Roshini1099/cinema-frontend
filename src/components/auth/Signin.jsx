@@ -36,7 +36,7 @@ function Signin(props) {
             localStorage.setItem('login', true)
             
 
-            props.history.push("/booking")
+            props.history.push("/movie")
 
         } catch (err) {
             setLoad(false); 

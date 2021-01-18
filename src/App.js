@@ -7,7 +7,7 @@ import Seat from './components/booking/Seat';
 import Signup from './components/auth/Signup';
 import Signin from './components/auth/Signin';
 import {Logout} from './components/auth/Logout'
-
+import Cards from './components/cards/Cards'
 const App = () => {
   return (
     <div className="App">
@@ -18,6 +18,7 @@ const App = () => {
             <Route exact path="/" component={Home}/>
             <Route path="/signup" component={Signup}/>
             <Route path="/signin" component={Signin}/>
+            <Route path='/movie' component={Cards}/>
             <Route path='/booking' component={Seat}/>
             <Route path='/logout' component={Logout}/>
            

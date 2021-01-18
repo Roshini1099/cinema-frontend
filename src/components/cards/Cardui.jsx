@@ -1,29 +1,35 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import StarRating from './StarRating'; 
-
 import './card-style.css';
+
 const Card=props=>{
     return(
-        <div className="movie-card">
-        <div className="movie-card card">
-            <img className="card-img-top" src={props.imgsrc} alt="" />
-            <div className="card-body">
-                <h4 className="card-title">{props.title}</h4>
-                <h6 className="card-subtitle mb-2 text-muted">{props.subtitle}</h6>
-                <p className="text-justify" style={{fontSize: '14px'}}>{props.about}</p>
-            </div>
-            <div className="card-footer">
-                <div className="clearfix">
-                    <div className="float-left mt-1">
-                        <StarRating rating={props.rating} />
+        <div>
+          
+            <div>
+           <hr></hr>
+           
+            <div>
+            <div className="card text-center shadow">
+                    <div className="overflow">
+                     <img src={props.imgsrc} alt="image1" className="card-img-top"/>
+                     </div>
+                     <div className="card-body text-dark">
+                         <h4 className="card-title">{props.title}</h4>
+                        <p className="card-text text-secondary">
+                             {props.about}
+                         </p>
+                            <Link to={'/booking'}>
+                            <button className="btn btn-outline-success" disabled={props.buttonname==="Not Available"? true :false}>{props.buttonname}</button>
+                            </Link>
                     </div>
-                    <div className="card-footer-badge float-right badge badge-primary badge-pill">{props.rating}</div>
-                </div>
             </div>
+
+                </div>
         </div>
-    </div>
+        </div>
+        
+        
     );
 }
 

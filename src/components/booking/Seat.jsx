@@ -205,6 +205,10 @@ handleClick(index){
     }
     
   }
+
+  back=()=>{
+    this.props.history.push("/movie")
+  }
     render() {
 
         return (
@@ -224,7 +228,7 @@ handleClick(index){
                 backgroundSize:'cover'
             }}>
               <div style={{ display: "flex" }}>
-                   <Button style={{ marginLeft: "auto" }} className="btn btn-primary btn-lg" variant="danger" onClick={this.logout}> Logout</Button>
+                   <Button style={{ marginLeft: "auto" }} className="btn btn-primary btn-lg" variant="danger" onClick={this.back}> Back</Button>
               </div>
               <hr></hr>
               <center><h3 style={{color:'white'}}>Book Your Seats now!!</h3></center>
@@ -249,16 +253,22 @@ handleClick(index){
                        <div>
                           <p>Seat has been successfully booked!!<br></br> 
                           <hr></hr>
-                          <b>Email: </b>{this.state.email}
-                            {this.state.updatedseats.map((seat)=>
+                          <ol>
+                            <li><b>Moviename:</b>Kingsgalive Final Fantasy</li>
+                            <li><b>Email:</b>{this.state.email}</li>
+                            <li>{this.state.updatedseats.map((seat)=>
                                 <ol>
                                     <li>Seatnumber:{seat}</li>
                                  </ol>
-                            )}
+                            )}</li>
+
+                          </ol>
+                          
+                            
                           <hr></hr>
                           </p>
                         </div>
-                        <center> <button><Link to="/">Ok</Link></button></center>
+                        <center> <button><Link to="/movie">Ok</Link></button></center>
                 </Modal>
                   </div>
                  

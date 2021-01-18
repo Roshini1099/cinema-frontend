@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import {Nav, Navbar} from "react-bootstrap";
 import styled from 'styled-components';
+
 const Styles=styled.div `
      .navbar{
     background-color:#373a40;
@@ -18,7 +19,7 @@ const Styles=styled.div `
 function Book(props) {
     return(
         <div>
-           
+          
         <div  
             style={
                 {
@@ -46,20 +47,21 @@ function Book(props) {
     );
 }
 const Navigation=()=>{
-    return(
-  
-    <Styles>
-      <Navbar expand="lg">
-        <Navbar.Brand href="/">Cinemaxx</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav"/>
-        <Navbar.Collapse id="basic-navbar-nav">
-            <Nav classname="ml-auto">
-              <Nav.Item><Nav.Link href="/">Home</Nav.Link></Nav.Item>
-              <Nav.Item><Nav.Link href="/signin">Login</Nav.Link></Nav.Item>
-  
-            </Nav>
-        </Navbar.Collapse>
-        </Navbar>
-    </Styles>
-  )};
+  return(
+
+  <Styles>
+    <Navbar expand="lg">
+      <Navbar.Brand href="/">Cinemaxx</Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+      <Navbar.Collapse id="basic-navbar-nav">
+          <Nav classname="ml-auto">
+            <Nav.Item><Nav.Link href="/">Home</Nav.Link></Nav.Item>
+            <Nav.Item><Nav.Link href="/signin"></Nav.Link></Nav.Item>
+
+          </Nav>
+      </Navbar.Collapse>
+      </Navbar>
+  </Styles>
+)};
+
 export default Book;
